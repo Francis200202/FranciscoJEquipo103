@@ -1,0 +1,6 @@
+1,Francis,correoff,contraff,2
+2,Manuel,correom,contram,0
+3,David,correod,contra,1
+4,Andrea,correo,contraA,0
+5,Alex,alx@uco.es,44856,0
+6,Jose,jose@uco.es,7795,0

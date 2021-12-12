@@ -8,6 +8,8 @@
 #include "administradorUsuario.h"
 #include "usuario.h"
 #include "administradorMaquina.h"
+#include "maquina.h"
+#include "reserva.h"
 using namespace std;
 
 int main(){

@@ -22,7 +22,7 @@ class Reserva{
         void setId(int id){idR_=id;};
         vector<int> getRecursos(){return Recursos_;};
         void setRecursos(vector<int> Recursos){Recursos_=Recursos;};
-        Usuario getUsuario(return usuario_);
+        Usuario getUsuario(){return usuario_;};
         void setUsuario(Usuario usuario){usuario_=usuario;};
 };
 

@@ -141,3 +141,34 @@ int Usuario::iniciosesion(){
     cout<<"Email no registrado"<<endl;
     return -1;
 }
+
+void Maquina::cargarMaquinas(){
+    ifstream entr("maquina.txt");
+    
+    string id, nucleos, memoria;
+    int idd, nucleoss, memoriaa;
+    while(getline(entr, id,',')){
+        //getline() lee del fichero de entrada y lo pone en un string
+        // hasta encontrar el delimitador o el final del fichero.
+        list<Maquina>::iterator it;
+        it = listaMaquinas_.begin();
+        getline(entr, nucleos,',');
+        getline(entr, memoria,'\n');
+        idd=stoi(id);
+        nucleoss=stoi(nucleos);
+        memoriaa=stoi(memoria);
+        listaMaquinas_.push_back(Maquina(idd, nucleoss, memoriaa));
+        it++;      
+    }
+    entr.close();
+}
+
+
+void Maquina::mostrarMaquinas(){
+    for (list<Maquina>::iterator i = listaMaquinas_.begin(); i != listaMaquinas_.end(); ++i)
+    {
+        cout<<"__Maquina "<<i->getId()<<"__"<<endl;
+        cout<<"Nucleos: "<<i->nucleos_<<"  Memoria: "<<i->memoria_<<endl;
+    }
+    cout<<endl;
+}

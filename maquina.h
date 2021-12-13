@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cstdio>
 #include <list>
-#include "reserva.h"
+
 using namespace std;
 class Maquina{
     private:
@@ -12,13 +12,16 @@ class Maquina{
         int nucleos_;
         int memoria_;
     public:
-        Maquina(int id, int nucleos, int memoria){id=id_; nucleos=nucleos_;memoria=memoria_};
+        friend class Reserva;
+        Maquina(int id, int nucleos, int memoria){id_=id; nucleos_=nucleos;memoria_=memoria;};
         int getId(){return id_;};
         void setId(int id){id_=id;};
         int getNucleos(){return nucleos_;};
         void setNucleos(int nucleos){nucleos_=nucleos;};
-        int getMemoria(return memoria_);
+        int getMemoria(){return memoria_;};
         void setMemoria(int memoria){memoria_=memoria;};
+        void cargarMaquinas();
+        void mostrarMaquinas();
 };
 
 #endif

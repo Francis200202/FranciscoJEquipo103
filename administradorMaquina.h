@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <list>
 #include "usuario.h"
+
 using namespace std;
 class AdministradorMaquina:public Usuario{
     private:
